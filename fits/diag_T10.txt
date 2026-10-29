@@ -1,0 +1,1 @@
+diag_T10: 44.0 min | divergences 0/0/0/0 | max-treedepth 0/0/0/0 | E-BFMI 0.51/0.57/0.48/0.41 | worst Rhat 1.021 | min bulk ESS 215 | min tail ESS 392 (fitted with the original R driver, cmdstanr; draws converted to .npz)

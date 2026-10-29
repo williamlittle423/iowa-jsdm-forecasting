@@ -1,0 +1,37 @@
+Rolling-origin JSDM forecasts, 2019: 1676 library forecasts, 1677 toxin forecasts per model
+
+==== Read-count forecasts (held-out libraries) ====
+  h    model    lpd_joint lpd_target      MAE     CRPS   in50   in80   in95
+  1    full        -16.44     -6.172   0.0151   0.0114   0.54   0.77   0.88
+  1    diag        -15.64     -5.931   0.0151   0.0113   0.54   0.78   0.89
+  1    persist                         0.0155
+  2    full        -17.31     -6.274   0.0185   0.0139   0.53   0.76   0.90
+  2    diag        -17.17     -6.425   0.0180   0.0137   0.54   0.77   0.88
+  2    persist                         0.0196
+  3    full        -17.89     -7.017   0.0204   0.0159   0.50   0.77   0.91
+  3    diag        -18.43     -7.019   0.0199   0.0159   0.47   0.76   0.90
+  3    persist                         0.0229
+  4    full        -18.03     -6.682   0.0229   0.0178   0.48   0.74   0.89
+  4    diag        -18.12     -6.959   0.0228   0.0184   0.43   0.72   0.86
+  4    persist                         0.0237
+  P1 PRIMARY  h=1 joint lpd, full - diag: -0.7947 [-2.0709, +0.0958] -> no detectable difference
+  h=2 joint lpd full - diag: -0.1379 [-1.0605, +0.5442]
+  h=3 joint lpd full - diag: +0.5339 [-0.0261, +1.4198]
+  h=4 joint lpd full - diag: +0.0824 [-0.4778, +0.6251]
+
+==== Toxin (censored-normal link) ====
+  >= 1.6 µg/L   (Brier: lower is better; new-event AUC: beach-weeks below 1.6 today)
+    h=1 Brier full 0.0833  diag 0.0825  T4 0.0712 | new-event AUC full 0.845  diag 0.849  T4 0.804  CF 0.701
+    h=2 Brier full 0.1038  diag 0.1038  T4 0.0884 | new-event AUC full 0.786  diag 0.787  T4 0.759  CF 0.641
+    h=3 Brier full 0.1228  diag 0.1239  T4 0.1065 | new-event AUC full 0.730  diag 0.718  T4 0.747  CF 0.653
+    h=4 Brier full 0.1362  diag 0.1392  T4 0.1268 | new-event AUC full 0.756  diag 0.743  T4 0.716  CF 0.693
+  >= 8 µg/L   (Brier: lower is better; new-event AUC: beach-weeks below 8 today)
+    h=1 Brier full 0.0593  diag 0.0592  T4 0.0412 | new-event AUC full 0.933  diag 0.934  T4 0.931  CF 0.914
+    h=2 Brier full 0.0677  diag 0.0676  T4 0.0486 | new-event AUC full 0.825  diag 0.824  T4 0.826  CF 0.756
+    h=3 Brier full 0.0750  diag 0.0754  T4 0.0611 | new-event AUC full 0.743  diag 0.723  T4 0.758  CF 0.735
+    h=4 Brier full 0.0815  diag 0.0823  T4 0.0704 | new-event AUC full 0.730  diag 0.711  T4 0.713  CF 0.799
+  P2 PRIMARY  h=1 Brier >= 1.6, full - diag: +0.0008 [-0.0016, +0.0031] -> no detectable difference
+  h=1 Brier >= 1.6 full - T4: +0.0122 [+0.0016, +0.0247]
+  h=2-4 Brier >= 1.6 full - T4: +0.0139 [+0.0044, +0.0262]
+  h=1 Brier >= 1.6 diag - T4: +0.0113 [+0.0010, +0.0237]
+  h=2-4 Brier >= 1.6 diag - T4: +0.0152 [+0.0035, +0.0297]

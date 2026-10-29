@@ -1,0 +1,1 @@
+full_T02: 350.1 min | divergences 0/0/0/0 | max-treedepth 0/0/0/0 | E-BFMI 0.61/0.59/0.62/0.63 | worst Rhat 1.004 | min bulk ESS 1161 | min tail ESS 2640 (fitted with the original R driver, cmdstanr; draws converted to .npz)
